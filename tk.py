@@ -15,3 +15,13 @@ tkList.append(4)
 print(tkList)
 
 print(tkList.count(4))
+
+tkList.insert(2, 'simento')
+
+print(tkList)
+
+tkList.remove('simento')
+
+tkList.sort()
+
+print(tkList)
