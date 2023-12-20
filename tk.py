@@ -1,5 +1,6 @@
-# tuples or smth
+# boolean
 
-tkTuple = (10, 20, 'Olá.')
+x = 10
+z = 20
 
-print(tkTuple)
+print(x < z and 1 + 1 == 2)
