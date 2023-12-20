@@ -1,6 +1,17 @@
-a = float(input("digite um numero pro a meo"))
-b = float(input("digite outro numero pro b meo"))
+# lists :O
 
-c = (a**2 + b**2)**(1/2)
+tkList = [4, 5, 6, 2, 0, 3]
+tkStrList = ['sou', 'literalmente', 'o', 'ayanokouji']
 
-print(c)
+warCrimeList = ['da', 1, 'pra misturar', 3.0, 'tipo em lista', [27, 900], 'meu deus do ceu']
+
+print(type(tkStrList))
+
+print(warCrimeList)
+print(4 in tkList)
+
+tkList.append(-100)
+tkList.append(4)
+print(tkList)
+
+print(tkList.count(4))
