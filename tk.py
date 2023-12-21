@@ -1,5 +1,3 @@
-# slicing
-a = list(range(5, 11))
+# sum
 
-print(a[0:3])
-print(a[::2])
+print(sum([10,20,30]))
