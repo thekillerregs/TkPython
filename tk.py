@@ -1,5 +1,5 @@
-# indexing or something
+# slicing
+a = list(range(5, 11))
 
-list = [4, 'hi', [5, 4, 3], 'yo', {'Squirrel': 'cute', 'Penguin': 'Yummy'}]
-
-print(list[4].get('Penguin'))
+print(a[0:3])
+print(a[::2])
