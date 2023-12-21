@@ -1,8 +1,16 @@
-# libraries - numpy
+# libraries - pandas
 import numpy as np
+import pandas as pd
 
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+var1 = np.random.randn(100) * 5 + 20
+var2 = np.random.randn(100) > 0
 
-print(np.mean(numbers))
+# labels
+labels = ['Temp (C)', 'Ice Cream']
 
-print(np.linspace(1, 7, 5))
+D = {labels[0]: var1, labels[1]: var2}
+
+df = pd.DataFrame(data=D)
+
+print(df)
+print(df.mean())
