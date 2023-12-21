@@ -1,24 +1,5 @@
-# dictionary
-# come on... its called hashmap
+# indexing or something
 
-D = dict()
+list = [4, 'hi', [5, 4, 3], 'yo', {'Squirrel': 'cute', 'Penguin': 'Yummy'}]
 
-D['name'] = 'Tk'
-
-print(D['name'])
-
-print(D.__contains__('name'))
-
-intone = int(input('Enter number 1'))
-inttwo = int(input('Enter number 2'))
-
-product = intone * inttwo
-
-newDict = dict()
-
-newDict['firstNumber'] = intone
-newDict['secondNumber'] = inttwo
-newDict['product'] = product
-
-
-print(newDict.items())
+print(list[4].get('Penguin'))
