@@ -1,16 +1,14 @@
-# libraries - pandas
-import numpy as np
-import pandas as pd
+# creating functions
 
-var1 = np.random.randn(100) * 5 + 20
-var2 = np.random.randn(100) > 0
+def tkFunction():
+    print(1 + 1)
 
-# labels
-labels = ['Temp (C)', 'Ice Cream']
 
-D = {labels[0]: var1, labels[1]: var2}
+tkFunction()
 
-df = pd.DataFrame(data=D)
 
-print(df)
-print(df.mean())
+def tkFunction2(input1, input2):
+    print(input1 + input2)
+
+
+tkFunction2(1, 2)
