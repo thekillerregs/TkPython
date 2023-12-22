@@ -1,14 +1,16 @@
-# creating functions
+# copies and references
+import copy
 
-def tkFunction():
-    print(1 + 1)
+a = [4, 3]
 
+b = a[:]
 
-tkFunction()
+b[0] = 5
 
+c = copy.deepcopy(b)
 
-def tkFunction2(input1, input2):
-    print(input1 + input2)
+c[0] = 27
 
-
-tkFunction2(1, 2)
+print(a)
+print(b)
+print(c)
