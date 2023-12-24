@@ -1,44 +1,30 @@
-# grafs
+# seaborn
 
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
+import seaborn as sns
 
-x = np.array([1, 2, 3, 4, 5])
+n = 200
+D = np.zeros((n, 2))
 
-plt.xlabel('fuck around')
-plt.ylabel('find out')
+D[:, 0] = np.linspace(0, 10, n) + np.random.randn(n)
+D[:, 1] = D[:, 0] ** 2 + np.random.randn(n) * 10
 
-plt.plot(x, x)
+sns.jointplot(x=D[:, 0], y=D[:, 1])
+plt.show()
+
+df = pd.DataFrame(data=D, columns=['var1', 'var2'])
+
+sns.jointplot(x=df.columns[0], y=df.columns[1], data=df, kind='kde')
 
 plt.show()
 
-x = np.linspace(-3, 3, 101)
+x = np.linspace(-1, 1, n)
+y1 = x ** 2
+y2 = np.sin(3 * x)
+y3 = np.exp(-10 * x ** 2)
 
-plt.plot(x, x, label='y=x')
-plt.plot(x, x ** 2, label='y=x**2')
-plt.plot(x, x ** 3, label='y=x**3')
-
-plt.legend()
-plt.xlabel('x')
-plt.ylabel('y=f(x)')
-plt.title('Mitada...')
-
-plt.xlim(x[0], x[-1])
-plt.ylim(-10, 10)
-
-plt.gca().set_aspect(.3)
-
-plt.show()
-
-fig, ax = plt.subplots(1)
-
-ax.plot(x, x, label='y=x')
-ax.plot(x, x ** 2, label='y=x**2')
-ax.plot(x, x ** 3, label='y=x**3')
-
-ax.set_xlabel('x')
-ax.set_ylabel('y=f(x)')
-ax.set_title('Mitada²')
-
+sns.scatterplot(x=y1, y=y2, hue=y3, palette='Spectral', legend=False)
 
 plt.show()
