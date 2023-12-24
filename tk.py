@@ -1,9 +1,10 @@
-# list comprehension
+# while
 
-list = [print(i ** 2) for i in range(10)]
+i = 0
 
-print(list)
 
-nl = ["Odd " if i % 2 == 1 else i for i in range(10)]
+while True:
+    print(i)
+    i += 1
 
-print(nl)
+    if i == 8: break
