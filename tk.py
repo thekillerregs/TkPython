@@ -1,7 +1,9 @@
-# if
+# for loop
 
-x = 1
+import numpy as np
 
-print("x is 1") if x == 1 and 2==2 else print("x is not 1")
+numbers = np.linspace(3, 17.1, 25)
 
-
+for n in range(18):
+    if n % 2 == 0:
+        print(str(n) + " is even")
