@@ -1,8 +1,14 @@
-# string interpolation
+# plots
 
-num = 11.7
-sng = 'cellar doors'
+import matplotlib.pyplot as plt
+import numpy as np
 
-print('i would have %g %s. ' % (num, sng))
+plt.plot(3, 4, 'c^')
+plt.plot(2, 4.2, 'bo')
+plt.legend(['cyan', 'blue'])
 
-print(f'I would like to have {num:.2f} {sng}')
+x = np.linspace(0, 3 * np.pi, 101)
+y = np.sin(x)
+
+plt.plot(x, y, 'm:')
+plt.show()
