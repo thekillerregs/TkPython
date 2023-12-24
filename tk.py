@@ -1,11 +1,8 @@
-# exceptions
+# string interpolation
 
-def funfun(x, y):
-    if not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
-        raise Exception('Only numbers!')
+num = 11.7
+sng = 'cellar doors'
 
-    z = x * y
-    return z
+print('i would have %g %s. ' % (num, sng))
 
-
-print(funfun(2, 2.5))
+print(f'I would like to have {num:.2f} {sng}')
