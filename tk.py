@@ -1,30 +1,44 @@
-# seaborn
+# images
 
 import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
+from imageio import imread
 import seaborn as sns
 
-n = 200
-D = np.zeros((n, 2))
+m = 3
+n = 5
 
-D[:, 0] = np.linspace(0, 10, n) + np.random.randn(n)
-D[:, 1] = D[:, 0] ** 2 + np.random.randn(n) * 10
+M = np.random.randint(10, size=(m, n))
+print(M)
 
-sns.jointplot(x=D[:, 0], y=D[:, 1])
+plt.imshow(M)
+
+for i in range(m):
+    for j in range(n):
+        plt.text(j, i, str(M[i, j]), fontsize=10, horizontalalignment='center', verticalalignment='center')
+
+plt.colorbar()
 plt.show()
 
-df = pd.DataFrame(data=D, columns=['var1', 'var2'])
+img = imread(
+    'https://scontent.fpfb7-1.fna.fbcdn.net/v/t39.30808-6/297192965_575940604212380_2796628958234673299_n.jpg?stp=dst-jpg_p600x600&_nc_cat=108&ccb=1-7&_nc_sid=dd5e9f&_nc_ohc=5i7agVNth5kAX-B7t4Q&_nc_ht=scontent.fpfb7-1.fna&oh=00_AfByTpnplGwyDqZmWofRoaMMv8bSt8wmceaD0G4-2qIfGA&oe=658DF6CD')
 
-sns.jointplot(x=df.columns[0], y=df.columns[1], data=df, kind='kde')
-
+plt.imshow(img)
+plt.title('Sakayanagi')
 plt.show()
 
-x = np.linspace(-1, 1, n)
-y1 = x ** 2
-y2 = np.sin(3 * x)
-y3 = np.exp(-10 * x ** 2)
+plt.hist(img.flatten(), bins=100)
+plt.show()
 
-sns.scatterplot(x=y1, y=y2, hue=y3, palette='Spectral', legend=False)
+plt.imshow(img, cmap='gray', vmin=150, vmax=200)
+plt.xticks([])
+plt.yticks([])
+plt.show()
 
+hilbertMatrix = np.zeros([10, 10])
+for i in range(10):
+    for j in range(10):
+        hilbertMatrix[i, j] = 1 / (i + j + 1)
+
+sns.heatmap(hilbertMatrix, vmax=.4)
 plt.show()
