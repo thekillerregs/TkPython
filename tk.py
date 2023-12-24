@@ -1,17 +1,9 @@
-# variables
+# list comprehension
 
-import numpy as np
+list = [print(i ** 2) for i in range(10)]
 
-N = 10
+print(list)
 
-r = np.zeros(N)
+nl = ["Odd " if i % 2 == 1 else i for i in range(10)]
 
-for i in range(N):
-    r[i] = i ** 2
-
-print(r)
-
-del r
-
-print(r)
-
+print(nl)
