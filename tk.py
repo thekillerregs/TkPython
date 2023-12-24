@@ -1,14 +1,22 @@
-# plots
+# subplots
 
 import matplotlib.pyplot as plt
 import numpy as np
 
-plt.plot(3, 4, 'c^')
-plt.plot(2, 4.2, 'bo')
-plt.legend(['cyan', 'blue'])
+plt.subplot(1, 2, 1)
+plt.plot(np.random.randn(10))
 
-x = np.linspace(0, 3 * np.pi, 101)
-y = np.sin(x)
+plt.subplot(1, 2, 2)
+plt.plot(np.random.randn(10))
 
-plt.plot(x, y, 'm:')
+plt.show()
+
+
+fig, ax = plt.subplots(1,2, figsize=(10,4))
+
+x = np.arange(10)
+
+ax[0].plot(x,x**2, 'b')
+ax[1].plot(x,np.sqrt(x),'r')
+
 plt.show()
