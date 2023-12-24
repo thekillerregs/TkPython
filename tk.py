@@ -1,9 +1,14 @@
-# for loop
+# enumerate and zip
 
 import numpy as np
 
-numbers = np.linspace(3, 17.1, 25)
+ns = np.linspace(-5, 5, 7)
 
-for n in range(18):
-    if n % 2 == 0:
-        print(str(n) + " is even")
+for i, n in enumerate(ns):
+    print("Index: " + str(i) + " has a value of " + str(n))
+
+listA = [3, 4, 5, 6, 3, -17]
+listB = ['q', 'w', 'e', 'r', 't', 'y']
+
+for a, b in zip(listA, listB):
+    print(str(a) + ' ' + b)
