@@ -1,17 +1,8 @@
-# resolution
+# transposing
 
-import matplotlib.pyplot as plt
 import numpy as np
-from IPython import display
-#deprecated :skull:
-display.set_matplotlib_formats('svg')
+import torch
 
-x = np.linspace(.5,5,10)
-y1 = np.log(x)
-y2 = 2-np.sqrt(x)
-
-plt.plot(x,y1,'bo-', label='log')
-plt.plot(x,y2,'rs-',label='sqrt')
-plt.legend()
-
-plt.show()
+# create a vector
+nv = np.array([[1, 2, 3, 4]])
+print(nv), print(' '), print(nv.T), print(' '), print(nv.T.T)
